@@ -1,3 +1,7 @@
+### 0.2.2
+
+- Patch `generateFromStaticPropertyMap` reference to `$static-map`
+
 ### 0.2.1
 
 - Update `atomic.min.css` build

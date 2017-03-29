@@ -23,7 +23,7 @@
 }
 
 @mixin generateFromStaticPropertyMap($map, $media-queries: false) {
-  @each $selector, $property-list in $static-map {
+  @each $selector, $property-list in $map {
     .#{$selector} {
       @each $property, $value in $property-list {
         #{$property}: $value;
