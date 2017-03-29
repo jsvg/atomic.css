@@ -1,3 +1,7 @@
+### 0.2.1
+
+- Update `atomic.min.css` build
+
 ### 0.2.0
 
 __Adjustments__
