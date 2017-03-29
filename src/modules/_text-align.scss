@@ -1,0 +1,11 @@
+$text-alignments: (
+  'l': left,
+  'r': right,
+  'c': center
+);
+
+@include generateFromMap(
+  $map: $text-alignments,
+  $selector-prefix: 't',
+  $properties: text-align
+);

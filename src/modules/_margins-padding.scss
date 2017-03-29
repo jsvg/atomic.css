@@ -1,0 +1,30 @@
+// < 1: Perfect fourth 1.25 || > 0: Golden ratio 1.618
+$scale: (
+  'n': 0,
+  '-5': 0.328rem,
+  '-4': 0.41rem,
+  '-3': 0.512rem,
+  '-2': 0.64rem,
+  '-1': 0.8rem,
+  '0': 1rem,
+  '1': 1.618rem,
+  '2': 2.618rem,
+  '3': 4.236rem,
+  '4': 6.854rem,
+  '5': 11.089rem
+);
+
+@include generateFromMap($map: $scale, $selector-prefix: 'pa', $properties: padding);
+@include generateFromMap($map: $scale, $selector-prefix: 'pl', $properties: padding-left);
+@include generateFromMap($map: $scale, $selector-prefix: 'pr', $properties: padding-right);
+@include generateFromMap($map: $scale, $selector-prefix: 'pt', $properties: padding-top);
+@include generateFromMap($map: $scale, $selector-prefix: 'pb', $properties: padding-bottom);
+@include generateFromMap($map: $scale, $selector-prefix: 'ph', $properties: (padding-left, padding-right));
+@include generateFromMap($map: $scale, $selector-prefix: 'pv', $properties: (padding-top, padding-bottom));
+@include generateFromMap($map: $scale, $selector-prefix: 'ma', $properties: margin);
+@include generateFromMap($map: $scale, $selector-prefix: 'ml', $properties: margin-left);
+@include generateFromMap($map: $scale, $selector-prefix: 'mr', $properties: margin-right);
+@include generateFromMap($map: $scale, $selector-prefix: 'mt', $properties: margin-top);
+@include generateFromMap($map: $scale, $selector-prefix: 'mb', $properties: margin-bottom);
+@include generateFromMap($map: $scale, $selector-prefix: 'mh', $properties: (margin-left, margin-right));
+@include generateFromMap($map: $scale, $selector-prefix: 'mv', $properties: (margin-top, margin-bottom));

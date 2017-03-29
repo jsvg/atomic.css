@@ -1,0 +1,12 @@
+$displays: (
+  'n': none,
+  'i': inline,
+  'b': block,
+  'id': inline-block
+);
+
+@include generateFromMap(
+  $map: $displays,
+  $selector-prefix: 'd',
+  $properties: display
+);

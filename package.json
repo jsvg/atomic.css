@@ -1,0 +1,32 @@
+{
+  "name": "atomic.css",
+  "version": "0.1.0",
+  "descriptions": "Dynamically generated atomic css stylesheet, highly inspired by Tachyons and the like.",
+  "author": "Julian van Giessen",
+  "keywords": [
+    "atomic",
+    "atomic-css",
+    "css",
+    "sass",
+    "scss"
+  ],
+  "license": "MIT",
+  "main": "dist/atomic.min.css",
+  "style": "dist/atomic.min.css",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "cssnano": "^3.10.0",
+    "node-sass": "^4.5.1",
+    "postcss": "^5.2.16",
+    "postcss-cli": "^3.0.0",
+    "stylelint": "^7.9.0",
+    "stylelint-config-standard": "^16.0.0"
+  },
+  "scripts": {
+    "zoom": "node-sass --omit-source-map-url src/main.scss dist/atomic.css",
+    "enhance": "postcss dist/atomic.css -o dist/atomic.min.css",
+    "prebuild": "npm run lint",
+    "build": "npm run zoom && npm run enhance",
+    "lint": "stylelint \"**/*.scss\""
+  }
+}

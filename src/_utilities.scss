@@ -1,0 +1,45 @@
+@mixin generateFromMap($map, $selector-prefix, $properties, $media-queries: true, $append-map: ()) {
+  $full-map: map-merge($map, $append-map);
+
+  @each $prop-suffix, $prop in $full-map {
+    .#{$selector-prefix}#{$prop-suffix} {
+      @each $property in $properties {
+        #{$property}: $prop;
+      }
+    }
+
+    @if $media-queries {
+      @each $break-suffix, $breakpoint-declaration in $breakpoints {
+        @media #{$breakpoint-declaration} {
+          .#{$selector-prefix}#{$prop-suffix}-#{$break-suffix} {
+            @each $property in $properties {
+              #{$property}: $prop;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin generateFromStaticPropertyMap($map, $media-queries: false) {
+  @each $selector, $property-list in $static-map {
+    .#{$selector} {
+      @each $property, $value in $property-list {
+        #{$property}: $value;
+      }
+    }
+
+    @if $media-queries {
+      @each $break-suffix, $breakpoint-declaration in $breakpoints {
+        @media #{$breakpoint-declaration} {
+          .#{$selector}-#{$break-suffix} {
+            @each $property, $value in $property-list {
+              #{$property}: $value;
+            }
+          }
+        }
+      }
+    }
+  }
+}

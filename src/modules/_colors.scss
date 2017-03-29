@@ -1,0 +1,48 @@
+$colors: (
+  'black-0': #000,
+  'black-1': #111,
+  'black-2':#333,
+  'black-3':#555,
+  'white-0': #fff,
+  'white-1': #f4f4f4,
+  'white-2': #eee,
+  'white-3': #fff,
+  'transparent': transparent,
+  'black-90': rgba(0, 0, 0, 0.9),
+  'black-80': rgba(0, 0, 0, 0.8),
+  'black-70': rgba(0, 0, 0, 0.7),
+  'black-60': rgba(0, 0, 0, 0.6),
+  'black-50': rgba(0, 0, 0, 0.5),
+  'black-40': rgba(0, 0, 0, 0.4),
+  'black-30': rgba(0, 0, 0, 0.3),
+  'black-20': rgba(0, 0, 0, 0.2),
+  'black-10': rgba(0, 0, 0, 0.1),
+  'white-90': rgba(255, 255, 255, 0.9),
+  'white-80': rgba(255, 255, 255, 0.8),
+  'white-70': rgba(255, 255, 255, 0.7),
+  'white-60': rgba(255, 255, 255, 0.6),
+  'white-50': rgba(255, 255, 255, 0.5),
+  'white-40': rgba(255, 255, 255, 0.4),
+  'white-30': rgba(255, 255, 255, 0.3),
+  'white-20': rgba(255, 255, 255, 0.2),
+  'white-10': rgba(255, 255, 255, 0.1),
+);
+
+@include generateFromMap(
+  $map: $colors,
+  $selector-prefix: '',
+  $properties: color,
+  $media-queries: false
+);
+@include generateFromMap(
+  $map: $colors,
+  $selector-prefix: 'bg-',
+  $properties: background-color,
+  $media-queries: false
+);
+@include generateFromMap(
+  $map: $colors,
+  $selector-prefix: 'b--',
+  $properties: border-color,
+  $media-queries: false
+);
