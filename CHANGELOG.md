@@ -1,3 +1,8 @@
+### 0.2.0
+
+__Adjustments__
+- Change white and black color selectors for [0, 3] to while0, white1, etc
+
 ### 0.1.0
 
 __Adjustments__
