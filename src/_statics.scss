@@ -11,10 +11,10 @@ $static-map: (
   'br4': (border-radius: 1rem),
   'br-100': (border-radius: 100%),
   'br-pill': (border-radius: 9999px),
-  'br--bottom': (border-top-left-radius: 0, border-top-right-radius: 0),
-  'br--top': (border-bottom-left-radius: 0, border-bottom-right-radius: 0),
-  'br--right': (border-top-left-radius: 0, border-bottom-left-radius: 0),
-  'br--left': (border-top-right-radius: 0, border-bottom-right-radius: 0),
+  'brtl0': (border-top-left-radius: 0),
+  'brtr0': (border-top-right-radius: 0),
+  'brbl0': (border-bottom-left-radius: 0),
+  'brbr0': (border-bottom-right-radius: 0),
   // border-section
   'ba': (border-style: solid, border-width: 1px),
   'bt': (border-top-style: solid, border-top-width: 1px),
@@ -37,6 +37,7 @@ $static-map: (
   'shadow-3': (box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2)),
   'shadow-4': (box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2)),
   'shadow-5': (box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2)),
+  // font-families in main.scss since they can't be interpolated here
   // font-style, transforms, variants, shadows
   'ttc': (text-transform: capitalize),
   'ttl': (text-transform: lowercase),

@@ -1,6 +1,6 @@
 {
   "name": "atomic.css",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "descriptions": "Dynamically generated atomic css stylesheet, highly inspired by Tachyons and the like.",
   "author": "Julian van Giessen",
   "keywords": [
@@ -27,6 +27,7 @@
     "enhance": "postcss dist/atomic.css -o dist/atomic.min.css",
     "prebuild": "npm run lint",
     "build": "npm run zoom && npm run enhance",
-    "lint": "stylelint \"**/*.scss\""
+    "lint": "stylelint \"**/*.scss\"",
+    "pub": "npm run lint && npm run build && npm run publish"
   }
 }

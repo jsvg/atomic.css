@@ -82,10 +82,10 @@ __Borders__
   'br4': (border-radius: 1rem),
   'br-100': (border-radius: 100%),
   'br-pill': (border-radius: 9999px),
-  'br--bottom': (border-top-left-radius: 0, border-top-right-radius: 0),
-  'br--top': (border-bottom-left-radius: 0, border-bottom-right-radius: 0),
-  'br--right': (border-top-left-radius: 0, border-bottom-left-radius: 0),
-  'br--left': (border-top-right-radius: 0, border-bottom-right-radius: 0),
+  'brtl0': (border-top-left-radius: 0),
+  'brtr0': (border-top-right-radius: 0),
+  'brbl0': (border-bottom-left-radius: 0),
+  'brbr0': (border-bottom-right-radius: 0),
   'ba': (border-style: solid, border-width: 1px),
   'bt': (border-top-style: solid, border-top-width: 1px),
   'br': (border-right-style: solid, border-right-width: 1px),
@@ -113,6 +113,9 @@ __Box Shadows__
 
 __Text__
 ```
+  // font-families
+  'ff1': (font-family: 'system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif'),
+  'ff2': (font-family: '"Roboto", sans-serif'),
   // font-style, transforms, variants, shadows
   'ttc': (text-transform: capitalize),
   'ttl': (text-transform: lowercase),

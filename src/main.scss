@@ -9,3 +9,12 @@
 @import 'modules/text-align';
 @import 'modules/type-scale';
 @import 'hardcoded/hover';
+
+// font-families in main.scss since they can't be interpolated here
+.ff1 {
+  font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+
+.ff2 {
+  font-family: "Roboto", sans-serif;
+}
